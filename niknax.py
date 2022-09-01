@@ -4,6 +4,8 @@ import time
 import cv2
 import pytesseract
 
+import Levenshtein as lv
+
 import string
 
 import os
@@ -74,6 +76,8 @@ def run(fname, resultsMap):
         # Apply OCR on the cropped image
         text = pytesseract.image_to_string(cropped, config='--psm 6')
         text = text.strip(string.whitespace)
+        text = text.replace("”", "\"")
+        text = text.replace("“", "\"")
 
         if len(text) == 0:
             continue
@@ -93,8 +97,43 @@ for i in range(0, len(dir_list)):
     fname = dir_list[i]
     print("Running " + str(i+1) + "/" + str(len(dir_list)) + "...")
     run(fname, resultsMap)
-    if i >= 5:
-        break
+    #if i >= 5:
+    #    break
+
+print("\nChecking string similarity...")
+
+keys = list(resultsMap.keys());
+for i in range(0, len(keys)-1):
+    for j in range(i + 1, len(keys)):
+        keyA = keys[i]
+        keyB = keys[j]
+
+        if keyA not in resultsMap or keyB not in resultsMap or keyA == keyB:
+            continue
+
+        if resultsMap[keyB] > resultsMap[keyA]:
+            keyB = keys[i]
+            keyA = keys[j]
+
+        auto = resultsMap[keyA] >= 3 * resultsMap[keyB]
+        
+        lvDist = lv.distance(keyB, keyA)
+        if lvDist <= 3:
+            if not auto:
+                inp = input("\nIs \n  |" + keyB + "| (" + str(resultsMap[keyB]) + ") supposed to be \n  |" + keyA + "| (" + str(resultsMap[keyA]) + ")? Y/N/S:")
+            if auto or inp == "Y" or inp == "y":
+                print("    Changing |" + keyB + "| to |" + keyA + "|")
+                resultsMap[keyA] += resultsMap[keyB]
+                keys[j] = keyA
+                del resultsMap[keyB]
+            elif inp == "S" or inp == "s":
+                print("    Changing |" + keyA + "| to |" + keyB + "|")
+                resultsMap[keyB] += resultsMap[keyA]
+                keys[i] = keyB
+                del resultsMap[keyA]
+            else:
+                print("    Skipping")
+
 
 print("Done.\n\nInventory:")
 
