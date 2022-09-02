@@ -17,6 +17,69 @@ dir_list.sort()
 topLeft = (300, 400)
 bottomRight = (1550, 1100)
 
+file = open("truth.txt")
+truthList = [line.strip() for line in file.readlines()]
+file.close()
+
+
+def isSimilar(word1, word2):
+    lvDist = lv.distance(word1, word2)
+    return lvDist <= 2
+
+
+def truthCompare(text):
+    s = text.split(" ")
+
+    allFound = []
+
+    for truth in truthList:
+        t = truth.split(" ")
+
+        isMatch = True
+
+        similars = []
+        score = 0
+        j = 0
+        for i in range(0, len(t)):
+            found = False
+            for jj in range(j, len(s)):
+                lvDist = lv.distance(t[i], s[jj])
+                if lvDist <= 2:
+                    similars.append(jj)
+                    score += lvDist
+                    j = jj + 1
+                    found = True
+                    break
+            if not found:
+                isMatch = False
+                break
+        
+        if not isMatch:
+            continue
+
+        allFound.append((score, truth, similars))
+
+    minIndex = -1
+    minScore = 50000
+    for i in range(len(allFound)):
+        if allFound[i][0] < minScore:
+            minScore = allFound[i][0]
+            minIndex = i
+
+    if minIndex > -1:
+        truth = allFound[minIndex][1]
+        t = truth.split(" ")
+        similars = allFound[minIndex][2]
+        for i in range(0, len(t)):
+            s[similars[i]] = t[i]
+        corrected = " ".join(s)
+
+        return corrected, truth
+        
+    return text, None
+    
+
+
 def run(fname, resultsMap):
     img = cv2.imread(folder + fname)
 
@@ -91,7 +154,12 @@ def run(fname, resultsMap):
         #cv2.imshow("n", rect)
         #cv2.waitKey(0)
 
+
+
+
+
 resultsMap = {}    
+
 
 for i in range(0, len(dir_list)):
     fname = dir_list[i]
@@ -100,9 +168,28 @@ for i in range(0, len(dir_list)):
     #if i >= 5:
     #    break
 
+print("\nCorrecting against truth list...")
+keys = list(resultsMap.keys())
+for i in range(0, len(keys)):
+    key = keys[i]
+    corrected, truth = truthCompare(key)
+    if truth is not None and key != corrected:
+        print("  Corrected |" + key + "|\n         to |" + corrected + "| against\n      truth |" + truth + "|\n")
+        
+        if corrected in resultsMap:
+            resultsMap[corrected] += resultsMap[key]
+        else:
+            resultsMap[corrected] = resultsMap[key]
+        
+        del resultsMap[key]
+
+    if len(key) <= 3: # too short, garbage probably
+        del resultsMap[key]
+
+
 print("\nChecking string similarity...")
 
-keys = list(resultsMap.keys());
+keys = list(resultsMap.keys())
 for i in range(0, len(keys)-1):
     for j in range(i + 1, len(keys)):
         keyA = keys[i]
@@ -114,19 +201,21 @@ for i in range(0, len(keys)-1):
         if resultsMap[keyB] > resultsMap[keyA]:
             keyB = keys[i]
             keyA = keys[j]
-
-        auto = resultsMap[keyA] >= 3 * resultsMap[keyB]
         
         lvDist = lv.distance(keyB, keyA)
+
+        auto = resultsMap[keyA] >= 3 * resultsMap[keyB] and lvDist <= 2
+        
         if lvDist <= 3:
             if not auto:
-                inp = input("\nIs \n  |" + keyB + "| (" + str(resultsMap[keyB]) + ") supposed to be \n  |" + keyA + "| (" + str(resultsMap[keyA]) + ")? Y/N/S:")
-            if auto or inp == "Y" or inp == "y":
+                inp = input("\nIs \n  |" + keyB + "| (" + str(resultsMap[keyB]) + ") supposed to be \n  |" + keyA + "| (" + str(resultsMap[keyA]) + ")? Y(es)/N(o)/S(wap):")
+                inp = inp.lower()
+            if auto or inp == "y" or inp == "yes":
                 print("    Changing |" + keyB + "| to |" + keyA + "|")
                 resultsMap[keyA] += resultsMap[keyB]
                 keys[j] = keyA
                 del resultsMap[keyB]
-            elif inp == "S" or inp == "s":
+            elif inp == "s" or inp == "swap":
                 print("    Changing |" + keyA + "| to |" + keyB + "|")
                 resultsMap[keyB] += resultsMap[keyA]
                 keys[i] = keyB

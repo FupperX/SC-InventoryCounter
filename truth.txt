@@ -1,0 +1,260 @@
+A03 Sniper Rifle
+Animus Missile Launcher
+AP-7 Concussion Grenade
+Arclight Pistol
+Arrowhead Sniper Rifle
+Atzkav Sniper Rifle
+BR-2 Shotgun
+C54 SMG
+Ceremonial Knife
+Coda Pistol
+Custodian SMG
+Demeco LMG
+Demon Fang Combat Knife
+Devastator Shotgun
+Door Breach Charge
+DS-12 Force Propulsion Grenade
+Enjakte Knife
+EP-5 EMP Grenade
+F55 LMG
+Firestorm Cannon
+Fresnel SMG
+FS-9 LMG
+FS-9H HMG
+FSK-8 Combat Knife
+Gallant Rifle
+GP-33 MOD Grenade Launcher
+HP-284 Rocket Launcher
+I'rhal Missile Launcher
+Insta-Friends Radar Scatter Grenade
+Kahix Missile Launcher
+Karna Rifle
+LH86 Pistol
+Lumin V SMG
+MK-4 Frag Grenade
+Novia Crossbow
+P4-AR Rifle
+P6-LR Sniper Rifle
+P8-AR Rifle
+P8-SC SMG
+Parallax Rifle
+PK-1 Sweeper
+Plasma Lance
+Pulse Pistol
+Quartz SMG
+R97 Shotgun
+Ravager-212 Twin Shotgun
+S-38 Pistol
+S71 Rifle
+Salvo Frag Pistol
+Sawtooth Combat Knife
+SC-1 LIDAR Grenade
+Scalpel Sniper Rifle
+Scourge Railgun
+Taser Pistol
+TBF-4 Combat Knife
+WowBlast Desperado Toy Pistol
+Yubarev Pistol
+A23 Helmet
+ADP-mk4 Helmet
+APOS Helmet
+Arden-SL Helmet
+Argus Helmet
+Aril Helmet
+Artimex Helmet
+Aves Helmet
+Aztalan Helmet
+Balor HCH Helmet
+Bastion Helmet
+Calico Helmet
+Calva Helmet
+Caudillo Helmet
+CBH-3 Helmet
+Death's Head Helmet
+Defiance Helmet
+DustUp Helmet
+Field Recon Suit Helmet
+Fieldsbury Dark Bear Helmet
+Fortifier Helmet
+G-2 Helmet
+Giocoso Helmet
+Horizon Helmet
+Horizon Rust Society Helmet
+Inmate Work Helmet
+Mandible Helmet
+Microid Battle Suit Helmet
+Morningstar Helmet
+Morozov-SH Helmet
+Neoni Helmet
+Novikov "Expo" Helmet
+Novikov Helmet
+Odyssey Helmet
+Odyssey II Helmet
+Oracle Helmet
+ORC-mkX Helmet
+Overlord Helmet
+Paladin Helmet
+Parasite Replica Helmet
+Parasite V: Dark Birth Replica Helmet
+Pembroke Helmet
+Regal-CS1 Helmet
+Renegade Helmet
+Sangar Helmet
+Snarling Vanduul Helmet
+Star Kitten Helmet
+Stoneskin Helmet
+The Butcher Helmet
+The Hill Horror Helmet
+Venture Helmet
+Voidripper Helmet
+Why Not? Helmet
+ADP Core
+ADP-mk4 Core
+Arden-SL Core
+Aril Core
+Artimex Core
+AVS-E Core
+Aztalan Core
+Bastion Core
+Calico Core
+Citadel Core
+Clash Core
+Defiance Core
+DustUp Core
+FBL-8a Core
+Field Recon Suit Core
+Inquisitor Core
+Lynx Core
+MacFlex Core
+MacFlex Rucksack Core
+Microid Battle Suit Core
+Morozov-SH Core
+ORC-mkV Core
+ORC-mkX Core
+Overlord Core
+PAB-1 Core
+Regal-CS1 Core
+Stitcher Core
+TrueDef-Pro Core
+Venture Core
+ADP Arms
+ADP-mk4 Arms
+Arden-SL Arms
+Aril Arms
+Artimex Arms
+AVS-E Arms
+Aztalan Arms
+Bastion Arms
+Calico Arms
+Citadel Arms
+Clash Arms
+Defiance Arms
+DustUp Arms
+FBL-8a Arms
+Field Recon Suit Arms
+Inquisitor Arms
+Lynx Arms
+MacFlex Arms
+MacFlex Rust Society Arm Armor
+Microid Battle Suit Arms
+Morozov-SH Arms
+ORC-mkV Arms
+ORC-mkX Arms
+Overlord Arms
+PAB-1 Arms
+Regal-CS1 Arms
+Stitcher Arms
+TrueDef-Pro Arms
+Venture Arms
+ADP Legs
+ADP-mk4 Legs
+Arden-SL Legs
+Aril Legs
+Artimex Legs
+AVS-E Legs
+Aztalan Legs
+Bastion Legs
+Calico Legs
+Citadel Legs
+Clash Legs
+Defiance Legs
+DustUp Legs
+FBL-8a Legs
+Field Recon Suit Legs
+Inquisitor Legs
+MacFlex Legs
+Microid Battle Suit Legs
+Morozov-SH Legs
+ORC-mkV Legs
+ORC-mkX Legs
+Overlord Legs
+PAB-1 Legs
+Regal-CS1 Legs
+Stitcher Legs
+TrueDef-Pro Legs
+Venture Legs
+Arden-CL Backpack
+Aril Backpack
+Cataby Backpack
+CSP-68H Backpack
+CSP-68L Backpack
+CSP-68M Backpack
+MacFlex Backpack
+Morozov-CH Backpack
+Novikov Backpack
+Pembroke Backpack
+Sinkhole Backpack
+Beacon Rust Society Undersuit
+Beacon Undersuit
+FBL-8u Undersuit
+ForceFlex Undersuit
+Foundation Undersuit
+GP-88
+Guardian Undersuit
+Lamont Undersuit
+Novikov "Expo" Armor
+Novikov Armor
+Odyssey Flight Suit
+Odyssey II Undersuit
+OMNI-CFS Diamond Undersuit
+Pembroke Armor
+ProtSkin Undersuit
+Sabine Flight Suit
+Scaleweave Undersuit
+Second Life Undersuit
+Stoneskin Undersuit
+Stoneskin-H Undersuit
+Stoneskin-M Undersuit
+TCS-4 Undersuit
+Venture Undersuit
+Black Prism (8x Telescopic)
+Delta (1x Reflex)
+EE16 (16x Telescopic)
+Gamma (1x Holographic)
+Gamma Duo (2x Holographic)
+Gamma Plus (3x Holographic)
+Omarof (16x Telescopic)
+OT4-RF (4x Telescopic)
+OT8-RF (8x Telescopic)
+PT1 (1x Holographic)
+PT2 (2x Holographic)
+PT3 (3x Holographic)
+RF1 (1x Reflex)
+Tau Plus (4x Telescopic)
+Theta Pro (8x Telescopic)
+Touchstone (8x Monitor)
+AdrenaPen (Demexatrine)
+CorticoPen (Sterogen)
+Dawnfire Signal Flare
+DetoxPen (Resurgera)
+Industrial Cutting Tool
+Industrial Salvage Tool
+Industrial Tractor Beam
+MedPen (Hemozal)
+OpioPen (Roxaphen)
+OxyPen
+ParaMed Medical Device
+Pyro RYT Multi-Tool
+QDB-12 QuiKCade
+QuikFlare
+QuikFlarePro
